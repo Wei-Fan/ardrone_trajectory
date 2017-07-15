@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- This is a sample lanuch file, please change it based on your needs -->
+<launch>
+	<node name="pid_control" pkg="ardrone_velocity" type="pid_control"/>
+    <node name="ardrone_pos_estimate" pkg="position_estimate" type="ardrone_trajectory" output="screen"/>
+    <node name="image_loss" pkg="image_loss" type="image_loss"/>
+    <node name="circle_detect" pkg="ardrone_trajectory" type="circle_detect"/>
+    <node name="ardrone_control" pkg="ardrone_trajectory" type="ardrone_control" output="screen"/>
+</launch>
